@@ -15,7 +15,7 @@ const HeroSection = () => {
         style={{ background: "var(--gradient-glow)" }}
       />
 
-      <div className="container relative z-10 mx-auto px-6 pt-32 pb-20">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 pt-32 pb-20">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -57,11 +57,11 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.45 }}
             className="flex flex-wrap gap-4"
           >
-            <Button variant="hero" size="lg" className="text-base px-8 py-6">
+            <Button variant="hero" size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6">
               Get Started
-              <ArrowRight className="w-5 h-5 ml-1" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1" />
             </Button>
-            <Button variant="hero-outline" size="lg" className="text-base px-8 py-6">
+            <Button variant="hero-outline" size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6">
               Explore Services
             </Button>
           </motion.div>
@@ -72,7 +72,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6"
+          className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6"
         >
           {[
             { value: "50+", label: "AI Projects Delivered" },
@@ -80,7 +80,7 @@ const HeroSection = () => {
             { value: "8+", label: "AI Service Domains" },
             { value: "95%", label: "Client Satisfaction" },
           ].map((stat) => (
-            <div key={stat.label} className="glass rounded-xl p-5 text-center">
+            <div key={stat.label} className="glass rounded-xl p-4 sm:p-5 text-center">
               <div className="text-3xl font-heading font-bold text-gradient mb-1">
                 {stat.value}
               </div>

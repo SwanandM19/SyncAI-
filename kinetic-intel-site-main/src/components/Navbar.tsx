@@ -58,7 +58,7 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 glass-strong"
     >
-      <div className="container mx-auto flex items-center justify-between px-6 py-3">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="SyncAI Consultancy" className="h-10 w-auto rounded" />
@@ -128,7 +128,7 @@ const Navbar = () => {
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden glass-strong border-t border-border overflow-hidden"
           >
-            <div className="px-6 py-4 space-y-1">
+            <div className="px-4 sm:px-6 py-4 space-y-1">
               {navItems.map((item) => (
                 <div key={item.label}>
                   <Link
