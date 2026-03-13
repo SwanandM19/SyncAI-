@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 30% 6%;
+    --foreground: 180 10% 92%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 180 10% 92%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 180 10% 92%;
+
+    --primary: 186 82% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 155 65% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 14%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 165 70% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 186 82% 30%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(186, 82%, 30%), hsl(155, 65%, 45%));
+    --gradient-hero: linear-gradient(160deg, hsl(220, 30%, 6%) 0%, hsl(220, 35%, 10%) 50%, hsl(186, 40%, 8%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(186, 82%, 30%, 0.15), transparent 70%);
+    --gradient-card: linear-gradient(145deg, hsl(220, 25%, 12%), hsl(220, 25%, 8%));
+
+    --shadow-glow: 0 0 40px hsl(186, 82%, 30%, 0.2);
+    --shadow-glow-strong: 0 0 60px hsl(186, 82%, 30%, 0.35);
+
+    --sidebar-background: 220 30% 6%;
+    --sidebar-foreground: 180 10% 92%;
+    --sidebar-primary: 186 82% 30%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 14%;
+    --sidebar-accent-foreground: 180 10% 92%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 186 82% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+  .border-gradient {
+    border-image: var(--gradient-primary) 1;
+  }
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  .glow-effect-strong {
+    box-shadow: var(--shadow-glow-strong);
+  }
+  .glass {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+  }
+  .glass-strong {
+    @apply bg-card/80 backdrop-blur-2xl border border-border/60;
+  }
+}
+
+/* Neural network canvas background */
+.neural-bg {
+  position: relative;
+  overflow: hidden;
+}
+.neural-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero);
+  z-index: 0;
+}
+.neural-bg::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: var(--gradient-glow);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(220, 30%, 6%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(186, 82%, 30%, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(186, 82%, 30%, 0.6);
+}
