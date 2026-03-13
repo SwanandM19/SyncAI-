@@ -11,11 +11,11 @@ const HeroSection = () => {
       <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
       <NeuralBackground />
       <div
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px] rounded-full pointer-events-none"
         style={{ background: "var(--gradient-glow)" }}
       />
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 pt-32 pb-20">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-16 sm:pb-20">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-heading font-bold leading-tight mb-6"
           >
             Transform Your
             <br />
@@ -45,7 +45,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
+            className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
           >
             SyncAI Consultancy empowers organizations with cutting-edge AI solutions,
             strategic marketing consultancy, and transformative training programs.

@@ -128,7 +128,7 @@ const Navbar = () => {
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden glass-strong border-t border-border overflow-hidden"
           >
-            <div className="px-4 sm:px-6 py-4 space-y-1">
+            <div className="max-h-[calc(100vh-80px)] overflow-y-auto px-4 sm:px-6 py-4 space-y-1">
               {navItems.map((item) => (
                 <div key={item.label}>
                   <Link

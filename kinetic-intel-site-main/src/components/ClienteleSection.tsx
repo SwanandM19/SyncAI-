@@ -7,7 +7,7 @@ const clients = [
 
 const ClienteleSection = () => {
   return (
-    <section className="py-20 border-t border-border/50">
+    <section className="py-12 sm:py-20 border-t border-border/50">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0 }}

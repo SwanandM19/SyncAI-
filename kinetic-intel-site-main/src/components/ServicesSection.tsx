@@ -17,7 +17,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 relative">
+    <section className="py-16 sm:py-24 relative">
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] pointer-events-none"
         style={{ background: "var(--gradient-glow)" }}
