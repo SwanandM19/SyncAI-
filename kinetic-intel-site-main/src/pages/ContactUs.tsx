@@ -18,16 +18,14 @@ const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
     phone: "",
-    subject: "",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you! We'll get back to you within 24 hours.");
-    setFormData({ name: "", email: "", company: "", phone: "", subject: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
@@ -78,38 +76,17 @@ const ContactUs = () => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="john@company.com"
-                        className="bg-muted/50 border-border/50"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="text-sm text-muted-foreground mb-1.5 block">Company</label>
-                      <Input
-                        value={formData.company}
-                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        placeholder="Your Company"
-                        className="bg-muted/50 border-border/50"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm text-muted-foreground mb-1.5 block">Phone</label>
-                      <Input
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 XXXXX XXXXX"
+                        placeholder="john@gmail.com"
                         className="bg-muted/50 border-border/50"
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="text-sm text-muted-foreground mb-1.5 block">Subject *</label>
+                    <label className="text-sm text-muted-foreground mb-1.5 block">Phone</label>
                     <Input
-                      required
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      placeholder="How can we help?"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      placeholder="+91 xxxxx xxxxx"
                       className="bg-muted/50 border-border/50"
                     />
                   </div>
@@ -142,7 +119,7 @@ const ContactUs = () => {
                     </div>
                     <div>
                       <div className="font-medium text-sm">Email</div>
-                      <div className="text-muted-foreground text-sm">info@syncai.in</div>
+                      <div className="text-muted-foreground text-sm">amey@aconsultancy.marketing</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -151,7 +128,7 @@ const ContactUs = () => {
                     </div>
                     <div>
                       <div className="font-medium text-sm">Phone</div>
-                      <div className="text-muted-foreground text-sm">+91 XXXXX XXXXX</div>
+                      <div className="text-muted-foreground text-sm">+91 96040 73232</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -160,7 +137,7 @@ const ContactUs = () => {
                     </div>
                     <div>
                       <div className="font-medium text-sm">Location</div>
-                      <div className="text-muted-foreground text-sm">India</div>
+                      <div className="text-muted-foreground text-sm">Behind MIS International School, Pune Octroi Naka, 33/1, Balewadi Rd, Opposite Chhatrapati Shivaji, Balewadi, Pune, Maharashtra 411045</div>
                     </div>
                   </div>
                 </div>

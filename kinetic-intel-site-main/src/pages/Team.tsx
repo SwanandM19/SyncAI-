@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Users, ArrowRight, CheckCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useRef, useState, useEffect } from "react";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -11,14 +12,22 @@ const fadeUp = {
 };
 
 const teamMembers = [
-  { name: "Alex Johnson", role: "Chief Technology Officer", expertise: "AI Architecture" },
-  { name: "Sarah Chen", role: "Head of AI Research", expertise: "Machine Learning" },
-  { name: "Michael Rodriguez", role: "Lead Data Scientist", expertise: "Big Data Analytics" },
-  { name: "Priya Patel", role: "Robotics Engineer", expertise: "Automation Systems" },
-  { name: "James Wilson", role: "AR/VR Specialist", expertise: "Immersive Technologies" },
-  { name: "Lisa Thompson", role: "Marketing Director", expertise: "Digital Strategy" },
-  { name: "David Kim", role: "DevOps Engineer", expertise: "Cloud Infrastructure" },
-  { name: "Maria Garcia", role: "UX Designer", expertise: "Human-Centered Design" }
+  { name: "Amey Pangarker", title: "Founder & Principal Consultant", image: "/amey pangarker.png" },
+  { name: "Jay Gondkar", title: "Graphic Designer", image: "/Jay Gondkar.jpeg" },
+  { name: "Krutika", title: "Website Developer", image: "/krutika.jpeg" },
+  { name: "Mitali", title: "Website Developer", image: "/mitalicropped.webp" },
+  { name: "Nikhil", title: "SEO Expert", image: "/nilkhil.jpeg" },
+  { name: "Nishant", title: "Graphic Designer", image: "/nishant.jpeg" },
+  { name: "Prasad", title: "Digital Marketing Manager", image: "/prasadd.png" },
+  { name: "Pratiksha", title: "Team Member", image: "/pratikshacropped.webp" },
+  { name: "Riya", title: "Team Member", image: "/riyacropped (1).webp" },
+  { name: "Sahil", title: "Sr. Marketing Specialist", image: "/sahil.jpeg" },
+  { name: "Sanika", title: "Website Developer", image: "/sanika.jpeg" },
+  { name: "Saurabh", title: "Graphics Designer", image: "/saurabh.jpeg" },
+  { name: "Suhani", title: "Team Member", image: "/suhani.webp" },
+  { name: "Tanvi", title: "Content Marketing Specialist", image: "/tanvi.jpeg" },
+  { name: "Tejas", title: "Team Member", image: "/tejas.webp" },
+  { name: "Vijya", title: "Website Developer", image: "/vijya.jpeg" },
 ];
 
 const teamValues = [
@@ -31,6 +40,20 @@ const teamValues = [
 ];
 
 const Team = () => {
+  const teamRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const updateScrollButtons = () => {
+    const el = teamRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 0);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth);
+  };
+
+  useEffect(() => {
+    updateScrollButtons();
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -86,30 +109,64 @@ const Team = () => {
               Meet the talented individuals who make SyncAI exceptional.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, i) => (
-              <motion.div
-                key={member.name}
-                {...fadeUp}
-                transition={{ delay: i * 0.1 }}
-                className="glass p-6 rounded-lg"
+
+          {/* Big Team Photo */}
+          <motion.div {...fadeUp} className="flex justify-center mb-12">
+            <img src="/Team.png" alt="Our Team" className="w-full max-w-4xl h-auto rounded-xl grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" />
+          </motion.div>
+
+          {/* Team Carousel */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
+            <div>
+              <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-3 block">
+                Meet the Experts
+              </span>
+              <h3 className="text-2xl font-heading font-bold">
+                Our <span className="text-gradient">Team</span>
+              </h3>
+            </div>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => scrollTeam("left")}
+                disabled={!canScrollLeft}
+                className="inline-flex items-center justify-center rounded-full border border-border/50 bg-card/70 p-3 text-sm text-muted-foreground shadow-sm transition hover:bg-card focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="Scroll team left"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary font-bold text-lg">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">{member.name}</h3>
-                    <p className="text-sm text-muted-foreground">{member.role}</p>
-                    <p className="text-xs text-primary">{member.expertise}</p>
-                  </div>
+                ◀
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollTeam("right")}
+                disabled={!canScrollRight}
+                className="inline-flex items-center justify-center rounded-full border border-border/50 bg-card/70 p-3 text-sm text-muted-foreground shadow-sm transition hover:bg-card focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="Scroll team right"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
+
+          <div
+            ref={teamRef}
+            onScroll={updateScrollButtons}
+            className="flex gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar"
+          >
+            {teamMembers.map((member) => (
+              <div
+                key={member.name}
+                className="min-w-[240px] max-w-[240px] flex-shrink-0 glass rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl transition-transform duration-300"
+              >
+                <div className="relative h-48 w-full overflow-hidden rounded-xl mb-5">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="h-full w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Expert in {member.expertise.toLowerCase()}, bringing years of experience and innovative thinking to every project.
-                </p>
-              </motion.div>
+                <div className="text-lg font-heading font-semibold">{member.name}</div>
+                <div className="text-sm text-muted-foreground">{member.title}</div>
+              </div>
             ))}
           </div>
         </div>

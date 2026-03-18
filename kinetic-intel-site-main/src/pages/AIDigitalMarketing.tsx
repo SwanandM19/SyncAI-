@@ -14,7 +14,11 @@ const service = {
   icon: Brain,
   title: "AI in Digital Marketing",
   slug: "ai-digital-marketing",
-  desc: "Harness the power of AI to revolutionize your digital marketing campaigns. From predictive analytics to personalized content, we help you reach the right audience at the right time with data-driven precision.",
+  desc: `Digital marketing has become increasingly data-driven, and artificial intelligence plays an important role in making sense of large amounts of customer information. At Sync AI, we help businesses use AI tools to better understand their audience and improve the effectiveness of their marketing efforts.
+
+Our solutions analyze customer behavior, campaign performance, and market trends to provide insights that support smarter marketing decisions. Businesses can use these insights to refine their strategies, improve audience targeting, and create more relevant marketing content.
+
+By integrating AI into marketing workflows, companies can automate repetitive tasks such as campaign monitoring, reporting, and optimization. This allows marketing teams to spend more time focusing on strategy and creativity while technology handles the complex data analysis behind the scenes.`,
   features: ["Predictive Customer Analytics", "AI-Powered Content Creation", "Programmatic Advertising", "Sentiment Analysis"],
   benefits: [
     "Increase conversion rates by up to 300%",
@@ -130,7 +134,7 @@ const AIDigitalMarketing = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{step}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Each step is designed to deliver measurable value while keeping your business goals front and center.
                 </p>
               </motion.div>
             ))}

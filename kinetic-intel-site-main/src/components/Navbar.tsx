@@ -62,9 +62,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="SyncAI Consultancy" className="h-10 w-auto rounded" />
-          <span className="hidden sm:block text-lg font-heading font-bold text-gradient">
-            SyncAI
-          </span>
+         
         </Link>
 
         {/* Desktop Nav */}

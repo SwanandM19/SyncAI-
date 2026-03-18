@@ -14,7 +14,11 @@ const service = {
   icon: Cog,
   title: "Customized AI Solutions",
   slug: "custom-solutions",
-  desc: "Bespoke AI products engineered specifically for your business challenges. From custom ML models to intelligent automation workflows.",
+  desc: `Every organization operates differently, which means technology solutions should be designed to fit specific business requirements. Sync AI develops customized artificial intelligence solutions that address the unique challenges faced by each client.
+
+Our team collaborates with businesses to understand their operational structure, identify inefficiencies, and design systems that improve productivity. These solutions may include intelligent data analysis, workflow automation, or decision‑support tools that help teams work more effectively.
+
+By building tailored AI applications, we ensure that businesses receive solutions that truly support their operations rather than forcing them to adapt to generic software. This personalized approach helps organizations achieve meaningful and measurable improvements in performance.`,
   features: ["Custom ML Models", "NLP Solutions", "Computer Vision", "Recommendation Engines"],
   benefits: [
     "Tailored solutions for unique challenges",
@@ -130,7 +134,7 @@ const CustomizedAISolutions = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{step}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Each step is designed to deliver measurable value while keeping your business goals front and center.
                 </p>
               </motion.div>
             ))}

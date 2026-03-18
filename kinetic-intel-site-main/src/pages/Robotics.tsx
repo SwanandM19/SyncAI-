@@ -14,7 +14,11 @@ const service = {
   icon: Cpu,
   title: "Robotics",
   slug: "robotics",
-  desc: "AI-powered robotics solutions for manufacturing, logistics, healthcare, and beyond. We design and deploy intelligent robotic systems.",
+  desc: `Robotics technologies are increasingly being used to support industries that require precision, consistency, and speed. Sync AI explores the integration of intelligent robotics systems that combine mechanical capabilities with advanced software intelligence.
+
+These systems can assist in performing physical tasks that are repetitive or require a high level of accuracy. In sectors such as manufacturing, logistics, and operations management, robotics can improve efficiency while maintaining consistent performance.
+
+By combining robotics with intelligent data systems, organizations can create environments where machines and human teams work together more effectively. This collaboration can lead to safer workplaces, improved productivity, and more reliable operational outcomes.`,
   features: ["Industrial Robotics", "Collaborative Robots", "Autonomous Navigation", "Quality Inspection"],
   benefits: [
     "Increase production efficiency by 50%",
@@ -130,7 +134,7 @@ const Robotics = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{step}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Each step is designed to deliver measurable value while keeping your business goals front and center.
                 </p>
               </motion.div>
             ))}

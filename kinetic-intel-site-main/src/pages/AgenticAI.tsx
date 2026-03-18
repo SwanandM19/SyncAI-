@@ -14,7 +14,11 @@ const service = {
   icon: Bot,
   title: "Agentic AI",
   slug: "agentic-ai",
-  desc: "Next-generation autonomous AI agents that think, plan, and execute tasks independently. Build intelligent systems that operate with minimal human oversight.",
+  desc: `Agentic AI refers to intelligent systems that are capable of performing tasks independently while adapting to changing conditions. At Sync AI, we explore and develop AI agents that can assist organizations by managing complex digital workflows.
+
+These systems can analyze data, make decisions based on defined objectives, and carry out actions without requiring constant human supervision. In many cases, they function like digital assistants that support teams by handling routine or data‑intensive tasks.
+
+As these systems continue to learn from data and interactions, they gradually become more efficient and capable. By integrating agent‑based AI into business processes, organizations can improve productivity and focus human expertise on more strategic activities.`,
   features: ["Autonomous Agents", "Multi-Agent Systems", "Task Orchestration", "Self-Learning Systems"],
   benefits: [
     "24/7 autonomous operation",
@@ -130,7 +134,7 @@ const AgenticAI = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{step}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Each step is designed to deliver measurable value while keeping your business goals front and center.
                 </p>
               </motion.div>
             ))}

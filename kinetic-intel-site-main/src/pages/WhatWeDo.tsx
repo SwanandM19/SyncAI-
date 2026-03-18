@@ -37,7 +37,16 @@ const WhatWeDo = () => {
               Our <span className="text-gradient">AI Services</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Comprehensive AI solutions designed to transform every aspect of your business — from marketing to manufacturing.
+              At Sync AI, we focus on helping organizations adopt artificial intelligence in practical and meaningful ways. Many businesses understand the potential of AI but struggle to integrate it effectively into their daily operations.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              Our role is to bridge that gap by designing solutions that are not only innovative but also useful in real business environments. We work closely with companies to understand their processes, goals, and challenges.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              Based on this understanding, we develop intelligent systems that improve efficiency, reduce manual effort, and support better decision‑making. Our approach combines technical expertise with a strong understanding of business strategy.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              From marketing intelligence and automation to robotics and immersive technologies, Sync AI builds solutions that help organizations modernize their operations and prepare for a technology‑driven future.
             </p>
           </motion.div>
         </div>

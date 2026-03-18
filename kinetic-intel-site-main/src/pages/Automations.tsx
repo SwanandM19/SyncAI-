@@ -14,7 +14,11 @@ const service = {
   icon: Zap,
   title: "Automations",
   slug: "automations",
-  desc: "Intelligent process automation that eliminates repetitive tasks, reduces errors, and frees your team to focus on high-value strategic work.",
+  desc: `Many businesses spend significant time on repetitive administrative tasks that could be handled more efficiently through automation. Sync AI develops intelligent automation systems that simplify routine processes and help organizations operate more smoothly.
+
+Our automation solutions connect different tools and platforms within a business so that information flows automatically between them. Tasks such as data entry, reporting, or operational coordination can be completed faster and with fewer errors.
+
+By reducing the need for manual intervention, automation allows teams to focus on higher‑value activities such as analysis, planning, and innovation. Over time, this leads to greater efficiency, improved productivity, and better use of organizational resources.`,
   features: ["Workflow Automation", "Document Processing", "Data Pipeline Automation", "Integration Services"],
   benefits: [
     "Reduce operational costs by 40%",
@@ -130,7 +134,7 @@ const Automations = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{step}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Each step is designed to deliver measurable value while keeping your business goals front and center.
                 </p>
               </motion.div>
             ))}

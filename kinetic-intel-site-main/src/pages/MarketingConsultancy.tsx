@@ -14,7 +14,11 @@ const service = {
   icon: Megaphone,
   title: "Marketing Consultancy",
   slug: "marketing",
-  desc: "Strategic marketing planning powered by AI analytics and deep market intelligence. We combine creativity with data to deliver campaigns that convert.",
+  desc: `Strong marketing strategies require both creativity and a clear understanding of the market. Sync AI provides marketing consultancy services that help organizations strengthen their brand presence and improve their overall marketing performance.
+
+Our team studies industry trends, consumer behavior, and competitive positioning to help businesses develop marketing strategies that are both practical and effective. We work with companies to refine their messaging, identify the right communication channels, and design campaigns that connect with their target audience.
+
+By combining strategic insight with modern digital tools, our consultancy services help businesses build sustainable marketing approaches that support long‑term growth and stronger customer relationships.`,
   features: ["Market Research & Analysis", "Brand Strategy", "Growth Hacking", "Performance Marketing"],
   benefits: [
     "Data-driven marketing strategies",
@@ -130,7 +134,7 @@ const MarketingConsultancy = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{step}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Each step is designed to deliver measurable value while keeping your business goals front and center.
                 </p>
               </motion.div>
             ))}

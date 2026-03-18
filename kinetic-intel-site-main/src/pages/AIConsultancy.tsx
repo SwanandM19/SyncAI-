@@ -14,7 +14,11 @@ const service = {
   icon: TrendingUp,
   title: "AI Consultancy",
   slug: "ai-consultancy",
-  desc: "Strategic AI advisory services to help businesses identify opportunities, mitigate risks, and build a roadmap for successful AI adoption across the organization.",
+  desc: `Introducing artificial intelligence into a business requires thoughtful planning and the right expertise. Sync AI provides consultancy services that help organizations understand where AI can create the most value within their operations.
+
+Our consultants evaluate current processes, identify areas where automation or intelligent systems could improve performance, and recommend practical solutions tailored to the organization’s needs. Rather than applying generic technologies, we focus on strategies that align with specific business goals.
+
+We also support businesses throughout the implementation journey, ensuring that new technologies integrate smoothly with existing systems. With the right guidance, organizations can adopt AI with confidence and build a foundation for long‑term innovation.`,
   features: ["AI Readiness Assessment", "Technology Stack Selection", "Implementation Roadmap", "ROI Optimization"],
   benefits: [
     "Accelerate AI adoption by 60%",
@@ -130,7 +134,7 @@ const AIConsultancy = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{step}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Each step is designed to deliver measurable value while keeping your business goals front and center.
                 </p>
               </motion.div>
             ))}

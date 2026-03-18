@@ -14,7 +14,11 @@ const service = {
   icon: Glasses,
   title: "Augmented Reality Solutions",
   slug: "ar-solutions",
-  desc: "Immersive AR experiences enhanced with artificial intelligence for training, marketing, retail, and enterprise applications.",
+  desc: `Augmented Reality (AR) is opening new possibilities for how businesses present information and interact with customers or employees. Sync AI develops AR solutions that blend digital content with real‑world environments to create interactive experiences.
+
+Organizations can use AR technology for training programs, product demonstrations, and enhanced customer engagement. By visualizing complex information directly within a real‑world setting, AR makes learning and communication more intuitive and engaging.
+
+Our AR solutions are designed to help businesses explore innovative ways of presenting information and improving user experiences. As digital and physical environments become increasingly connected, AR technologies will play an important role in shaping the future of business communication.`,
   features: ["AR Training Simulations", "Virtual Try-On", "Interactive Product Demos", "Spatial Computing"],
   benefits: [
     "Enhanced user engagement",
@@ -130,7 +134,7 @@ const ARSolutions = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{step}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Each step is designed to deliver measurable value while keeping your business goals front and center.
                 </p>
               </motion.div>
             ))}
